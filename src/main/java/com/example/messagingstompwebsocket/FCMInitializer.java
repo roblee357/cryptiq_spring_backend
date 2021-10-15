@@ -13,7 +13,7 @@ import com.google.firebase.FirebaseOptions;
 @Service
 public class FCMInitializer {
 //    @Value("${app.firebase-configuration-file}")
-    private String firebaseConfigPath = "fcm/criptiqtest-firebase-adminsdk-zdem5-8ff3637c11.json";
+    private String firebaseConfigPath = "fcm/cryptiq-app-firebase-adminsdk-ujxa3-35e1634889.json";
     Logger logger = LoggerFactory.getLogger(FCMInitializer.class);
     @PostConstruct
     public void initialize() {

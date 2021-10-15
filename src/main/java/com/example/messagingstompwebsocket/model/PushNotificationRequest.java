@@ -5,6 +5,7 @@ public class PushNotificationRequest {
     private String message;
     private String topic;
     private String token;
+    private String UID;
 	public String getTitle() {
 		return title;
 	}
@@ -30,4 +31,19 @@ public class PushNotificationRequest {
 		this.token = token;
 	}  
     
+	public String getUID() {
+		return UID;
+	}
+	public void setUID(String uID) {
+		UID = uID;
+	}
+	public Message convertToMessage() {
+		Message message= new Message();
+		message.setMessage(this.message);
+		message.setToken(this.token);
+		message.setTopic(this.topic);
+		message.setUID(this.UID);
+		
+		return message;
+	}
 }
