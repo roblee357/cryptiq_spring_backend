@@ -20,7 +20,8 @@ public class PushNotificationController {
     private PushNotificationService pushNotificationService;
     @Autowired 
     private MessageRepository messageRepository;
-    String token = "eqvUCUsHQhmunV9y1vRMy2:APA91bFTdgnRWohTTaHFQHBXKb_Rkum64Zbk5wrnsUhOysnBbOfE28U--nYtpmkqFjt1QIIPYFur-uoaSuIejjoJDuPL_duW6szQCXsq9kRg29ps6AQLxoUVOKxwRx7KjIePNQhYPzw3";
+//    String token = "eqvUCUsHQhmunV9y1vRMy2:APA91bFTdgnRWohTTaHFQHBXKb_Rkum64Zbk5wrnsUhOysnBbOfE28U--nYtpmkqFjt1QIIPYFur-uoaSuIejjoJDuPL_duW6szQCXsq9kRg29ps6AQLxoUVOKxwRx7KjIePNQhYPzw3";
+    String token = "dvW1-dp7SzmxaeKZ_bUYjc:APA91bHQDFp54bMGgOJx-dwdlmB1avO7KtGY1FMJtXiQl7PvJvuUNk0hvejAej48cG3aqbjixsrYlWlH2ka4A9U9y6mLzeJ3fhR7vgftid3nqo3kpYnJqISZ1Hw2c86TYVmCpAQbOhxi";
     public PushNotificationController(PushNotificationService pushNotificationService) {
         this.pushNotificationService = pushNotificationService;
     }
