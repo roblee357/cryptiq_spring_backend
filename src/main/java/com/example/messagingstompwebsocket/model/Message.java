@@ -3,6 +3,7 @@ package com.example.messagingstompwebsocket.model;
 import java.sql.Date;
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,6 +18,7 @@ public class Message {
 	private Integer id;
 	
 	private String topic;
+	@Column(length = 2000)
 	private String message;
 	private String token;
 	private String UID;

@@ -41,8 +41,9 @@ public class FCMService {
         Message message = getPreconfiguredMessageToToken(request);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String jsonOutput = gson.toJson(message);
+        logger.info("Message to send. \n" + jsonOutput);
         String response = sendAndGetResponse(message);
-        logger.info("Sent message to token. Device token: " + request.getToken() + ", " + response+ " msg "+jsonOutput);
+        logger.info("Response from messaging. Device token: " + request.getToken() + ", " + response+ " msg "+jsonOutput);
     }
     private String sendAndGetResponse(Message message) throws InterruptedException, ExecutionException {
         return FirebaseMessaging.getInstance().sendAsync(message).get();
