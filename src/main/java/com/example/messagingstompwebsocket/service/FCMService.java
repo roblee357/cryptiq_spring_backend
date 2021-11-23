@@ -75,7 +75,7 @@ public class FCMService {
         AndroidConfig androidConfig = getAndroidConfig(request.getTopic());
         ApnsConfig apnsConfig = getApnsConfig(request.getTopic());
         return Message.builder()
-                .setApnsConfig(apnsConfig).setAndroidConfig(androidConfig).setNotification(
+                .setApnsConfig(apnsConfig).setAndroidConfig(androidConfig).putData ("signature", request.getSignature()).setNotification(
                         new Notification(request.getTitle(), request.getMessage()));
     }
 }

@@ -45,6 +45,7 @@ public class ReceivedMessage {
 		req.setToken(getReceivingDevice());
 		req.setTopic("");
 		req.setUID(this.message.sentTo);
+		req.setSignature(message.getSignature());
 		return req;
 	}
 

@@ -6,6 +6,8 @@ public class PushNotificationRequest {
     private String topic;
     private String token;
     private String UID;
+    private String signature;
+    
 	public String getTitle() {
 		return title;
 	}
@@ -37,6 +39,14 @@ public class PushNotificationRequest {
 	public void setUID(String uID) {
 		UID = uID;
 	}
+	
+	public String getSignature() {
+		return signature;
+	}
+	public void setSignature(String signature) {
+		this.signature = signature;
+	}
+	
 	public Message convertToMessage() {
 		Message message= new Message();
 		message.setMessage(this.message);
